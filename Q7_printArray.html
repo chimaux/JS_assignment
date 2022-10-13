@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+</head>
+<body>
+   
+    
+
+    <script>
+/*
+7. Write a JavaScript program which prints the elements of the following array. Go to the editor
+Note : Use nested for loops.
+Sample array : var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+Sample Output :
+"row 0"
+" 1"
+" 2"
+" 1"
+" 24"
+"row 1"
+
+*/
+
+let printArray = (array)=>{
+
+    for(let i = 0; i < array.length; i++){
+        console.log(`Row ${[i]}`)
+        for(let a = 0; a < array[i].length; a++){
+            console.log(array[i][a])
+        }
+    }
+
+}
+var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+printArray(a)
+
+
+
+    </script>
+</body>
+</html>

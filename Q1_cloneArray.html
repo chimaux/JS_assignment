@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>cloneArray</title>
+  </head>
+  <body>
+    <script>
+      /*
+1. Write a JavaScript function to clone an array. Go to the editor
+Test Data :
+console.log(array_Clone([1, 2, 4, 0]));
+console.log(array_Clone([1, 2, [4, 0]]));
+Results
+[1, 2, 4, 0]
+[1, 2, [4, 0]]
+
+
+
+
+      let cloneArray = (array) => {
+        let newArray = [];
+        for(i=0; i <= array.length; i++){
+            newArray.push(array[i]);
+            return newArray;
+        }
+        
+      };
+
+      console.log(cloneArray(['a','b','c','d','e','f']));
+
+
+
+
+*/
+      let array_Clone = (array) => {
+        let newArray = [];
+        for (i = 0; i < array.length; i++) {
+          newArray.push(array[i]);
+        }
+        
+
+        if (array === newArray) {
+          console.log(true);
+        } else {
+          console.log(false);
+        }
+        return newArray;
+      };
+
+      console.log(array_Clone([1, 2, 4, 0]));
+      console.log(array_Clone([1, 2, [4, 0]]));
+
+      let array1 = [1, 2, 3, 4, 5, 6, 7];
+      let cloneArray1 = [...array1];
+      console.log(cloneArray1);
+
+      if (array1 === cloneArray1) {
+        console.log(true);
+      } else {
+        console.log(false);
+      }
+    </script>
+  </body>
+</html>

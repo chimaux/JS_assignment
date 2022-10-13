@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>array</title>
+  </head>
+  <body>
+    <script>
+      //8. Write a JavaScript program to compute the sum and product of an array of integers
+      // let array1 = [2,3,4,5,6,7]
+
+      let compute = (array)=>{
+        let initial = 0;
+        let initial2 = 1;
+      for(let i = 0; i < array.length; i++){
+        initial = array[i] + initial;
+        initial2 = array[i] * initial2;
+      }
+      console.log(`The sum of the array is : ${initial} \n The product of the array is : ${initial2}`);
+      }
+      let array1 = [2,3,4,5,6,7];
+      compute(array1);
+
+    </script>
+  </body>
+</html>

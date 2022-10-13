@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+   
+    
+
+    <script>
+/*
+
+3. Write a JavaScript function to get the last element of an array. Passing a parameter 'n' 
+will return the last 'n' elements of the array. Go to the editor
+Test Data :
+console.log(last([7, 9, 0, -2]));
+console.log(last([7, 9, 0, -2],3));
+console.log(last([7, 9, 0, -2],6));
+Expected Output :
+-2
+[9, 0, -2]
+[7, 9, 0, -2]
+
+*/
+
+let last = (array,n)=>{
+    let value;
+    if (n < 0 || n == 0 ){
+        value = [];
+    }
+    else if (n > array.length || n == array.length){
+        value = array;
+    }
+    else if(n > 0 || n < array.length){
+        let x = array.length - n;
+        value = array.slice(x,array.length)
+    }
+    else if(n == undefined){
+        let x = array.length - 1;
+        value = array.slice(x,array.length)
+    }
+    else{
+        value = "error";
+    }
+
+    return value;
+
+    }
+ 
+
+    console.log(last([7, 9, 0, -2]));
+    console.log(last([7, 9, 0, -2],3));
+    console.log(last([7, 9, 0, -2],6));
+    console.log(last([7, 9, 0, -2,7,8,3,5,67,8,9,0,6,5,5],6));
+    </script>
+</body>
+</html>

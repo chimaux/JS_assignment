@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>number stuff</title>
+  </head>
+  <body>
+    <script>
+      /*
+  4. Write a JavaScript program which accept a number as 
+  input and insert dashes (-) between each two even numbers. 
+  For example if you accept 025468 the output should be
+   0-254-6-8. Go to the editor
+   
+
+  */
+
+      let testingEven = (numVal) => {
+        let truthArray = [];
+        let truthArray2 = [];
+        let i2 = 1;
+        for (let i = 0; i < numVal.length; i++) {
+          let value = Number(numVal[i]) % 2;
+          truthArray.push(value);
+        }
+        initial = numVal.trim().split("");
+
+        for (let i = 0; i < initial.length; i++) {
+          if (truthArray[i] == 0 && truthArray[i + 1] == 0) {
+            initial.splice(i + i2, 0, "-");
+            i2++;
+          } else if (truthArray[i] != 0 && truthArray[i + 1] != 0) {
+          }
+        }
+
+        console.log(initial.join(""));
+      };
+
+      testingEven("24684444444440");
+
+    </script>
+  </body>
+</html>

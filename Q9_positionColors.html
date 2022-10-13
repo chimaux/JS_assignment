@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>colors</title>
+  </head>
+  <body>
+    <script>
+      /*9. We have the following arrays : Go to the editor
+      color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+      o = ["th","st","nd","rd"]
+      Write a JavaScript program to display the colors in the following way :
+      "1st choice is Blue ."
+      "2nd choice is Green."
+      "3rd choice is Red."
+      - - - - - - - - - - - - -
+      Note : Use ordinal numbers to tell their position.*/
+      let colors = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+      let o = ["th","st","nd","rd"];
+
+      let orderColor = (colors,o)=>{
+        for(let i=0; i < colors.length; i++){
+            if(colors.indexOf(colors[i]) == 0){
+                console.log(`${i+1}${o[1]} choice is ${colors[i]}`)
+            }
+            if(colors.indexOf(colors[i]) == 1){
+                console.log(`${i+1}${o[2]} choice is ${colors[i]}`)
+            }
+            if(colors.indexOf(colors[i]) == 2){
+                console.log(`${i+1}${o[3]} choice is ${colors[i]}`)
+            }
+            if(colors.indexOf(colors[i]) > 2){
+                console.log(`${i+1}${o[0]} choice is ${colors[i]}`)
+            }
+
+        }
+      }
+      orderColor(colors,o)
+    </script>
+  </body>
+</html>

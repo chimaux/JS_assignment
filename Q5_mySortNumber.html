@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Sort algorithm in ascending and decending order
+
+      let sortIt = (array, sizeOfArray) => {
+        for (let lastIndex = sizeOfArray - 1; lastIndex > 0; lastIndex--) {
+          for (let i = 0; i < sizeOfArray; i++) {
+            if (array[i] > array[i + 1]) {
+              let temp = array[i];
+              array[i] = array[i + 1];
+              array[i + 1] = temp;
+            }
+          }
+        }
+
+        let newArray = [];
+        for (let i = 0; i < sizeOfArray; i++) {
+          let a = 1 + i;
+          let b = 0 + i;
+          let val = array.slice(sizeOfArray - a, sizeOfArray - b);
+          
+          newArray.push(val)
+  
+        }
+        return array +"\n"+ newArray;
+      };
+      let c = [2, 3, 4, 5, -2, 9, 1, 4];
+      console.log(sortIt(c, c.length));
+    </script>
+  </body>
+</html>
